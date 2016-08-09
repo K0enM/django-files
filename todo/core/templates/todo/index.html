@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To-Do app</title>
+  </head>
+  <body>
+    {% if todos %}
+      {% for todo in todos %}
+        <h1>{{ todo.naam }}</h1>
+        <hr>
+        <p>{{ todo.beschrijving }}</p>
+        <p>{{ todo.created }}</p>
+      {% endfor %}
+    {% endif %}
+
+    <a href="/add">Voeg todo toe</a>
+  </body>
+</html>
